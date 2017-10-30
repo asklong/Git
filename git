@@ -1,0 +1,23 @@
+Command line instructions
+Git global setup
+
+git config --global user.name "ke.jin"
+git config --global user.email "ke.jin@jd.com"
+
+Create a new repository
+
+git clone http://git.jd.com/ke.jin/word2vec.git
+cd word2vec
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+
+Existing folder or Git repository
+
+cd existing_folder
+git init
+git remote add origin http://git.jd.com/ke.jin/word2vec.git
+git add .
+git commit
+git push -u origin master
