@@ -24,7 +24,5 @@ git push -u origin master
 
 
 what's the mean of git commit and git push
-
-commit: adding changes to the local repository
-
-push: to transfer the last commit(s) to a remote server
+git commit record your changes to the local repository.
+git push update the remote repository with your local changes.
