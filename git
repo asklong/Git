@@ -21,3 +21,10 @@ git remote add origin http://git.jd.com/ke.jin/word2vec.git
 git add .
 git commit
 git push -u origin master
+
+
+what's the mean of git commit and git push
+
+commit: adding changes to the local repository
+
+push: to transfer the last commit(s) to a remote server
