@@ -26,3 +26,25 @@ git push -u origin master
 what's the mean of git commit and git push
 git commit record your changes to the local repository.
 git push update the remote repository with your local changes.
+
+
+
+Permission denied (publickey):https://www.zhihu.com/question/21402411
+如果你曾经出现过这种问题，我有一个解决方案
+首先，清除所有的key-pair
+ssh-add -D
+rm -r ~/.ssh
+删除你在github中的public-key
+
+重新生成ssh密钥对
+ssh-keygen -t rsa -C "xxx@xxx.com"
+chmod 0700 ~/.ssh
+chmod 0600 ~/.ssh/id_rsa*
+接下来正常操作
+在github上添加公钥public-key:
+1、首先在你的终端运行 xclip -sel c ~/.ssh/id_rsa.pub将公钥内容复制到剪切板
+2、在github上添加公钥时，直接复制即可
+3、保存
+测试：
+在终端 ssh -T git@github.com
+成功即可，不成功？我也没办法了，哈哈
